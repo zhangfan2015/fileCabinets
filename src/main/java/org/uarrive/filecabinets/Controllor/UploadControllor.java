@@ -46,7 +46,7 @@ public class UploadControllor {
         file.setId(UUID.randomUUID().toString().replace("-",""));
         int dotIndex = fileName.lastIndexOf('.');
         if (dotIndex > 0) {
-            file.setFileType(fileName.substring(dotIndex + 1));
+            file.setFileType(fileName.substring(dotIndex + 1).toLowerCase());
         }
         file.setOriginName(fileName);
         file.setFileSize(Double.valueOf(originalFileSize));
